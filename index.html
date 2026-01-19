@@ -115,36 +115,6 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 40px rgba(34, 197, 94, 0.1);
         }
 
-        .project-image {
-            width: 100%;
-            height: 280px;
-            background: #18181b;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-bottom: 1px solid #27272a;
-            overflow: hidden;
-        }
-
-        .project-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .project-image-placeholder {
-            color: #3f3f46;
-            font-size: 0.9rem;
-            text-align: center;
-        }
-
-        .project-image-placeholder svg {
-            width: 48px;
-            height: 48px;
-            margin-bottom: 12px;
-            stroke: #3f3f46;
-        }
-
         .project-content {
             padding: 28px 32px;
         }
@@ -211,6 +181,16 @@
             font-size: 0.9rem;
         }
 
+        .github-link {
+            color: #22c55e;
+            text-decoration: none;
+            margin-left: 8px;
+        }
+
+        .github-link:hover {
+            text-decoration: underline;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .name {
@@ -221,13 +201,10 @@
                 font-size: 1rem;
             }
 
-            .project-image {
-                height: 200px;
-            }
-
             .project-content {
                 padding: 20px 24px;
             }
+        }
     </style>
 </head>
 <body>
@@ -240,7 +217,6 @@
                 Passionate about cybersecurity with hands-on experience in security analysis, 
                 threat detection, and building security tools. Explore my projects below.
             </p>
-
         </header>
 
         <!-- Projects Section -->
@@ -249,30 +225,48 @@
             
             <div class="projects-grid">
                 
-                <!-- Project 1 -->
+                <!-- Smart Contract Vulnerability Scanner -->
                 <article class="project-card">
-                    <div class="project-image">
-                        <!-- Replace the placeholder below with: <img src="your-image.png" alt="Project screenshot"> -->
-                        <div class="project-image-placeholder">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-                            </svg>
-                            <p>Project Screenshot</p>
-                        </div>
-                    </div>
                     <div class="project-content">
-                        <h3 class="project-title">Project Name 1</h3>
+                        <h3 class="project-title">Smart Contract Vulnerability Scanner</h3>
                         <p class="project-description">
-                            Brief description of your first project. Explain what it does, what security 
-                            problem it solves, and any interesting technical challenges you overcame. 
-                            Keep it concise but informative for potential employers.
+                            A Python-based security tool that automatically scans Ethereum smart contracts 
+                            for common vulnerabilities. Detects issues like reentrancy attacks, integer 
+                            overflow/underflow, and unchecked external calls. Essential for Web3 security 
+                            auditing and protecting DeFi protocols from exploits.
                         </p>
                         <div class="project-tags">
                             <span class="tag">Python</span>
-                            <span class="tag">Security</span>
+                            <span class="tag">Blockchain Security</span>
+                            <span class="tag">Smart Contracts</span>
+                            <span class="tag">Web3</span>
+                        </div>
+                        <a href="https://github.com/Samuel-Holder/smart-contract-vuln-scanner" class="project-link" target="_blank">
+                            View on GitHub
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Network Scanner -->
+                <article class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">NetScanner</h3>
+                        <p class="project-description">
+                            A network reconnaissance tool built in Python for discovering hosts, open ports, 
+                            and services on a network. Useful for penetration testing, network auditing, 
+                            and identifying potential security weaknesses in network infrastructure. 
+                            Helps security teams map attack surfaces and prioritise remediation efforts.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
                             <span class="tag">Networking</span>
+                            <span class="tag">Penetration Testing</span>
+                            <span class="tag">Reconnaissance</span>
                         </div>
-                        <a href="https://github.com/yourusername/project1" class="project-link" target="_blank">
+                        <a href="https://github.com/Samuel-Holder/netscanner" class="project-link" target="_blank">
                             View on GitHub
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
@@ -281,30 +275,23 @@
                     </div>
                 </article>
 
-                <!-- Project 2 -->
+                <!-- Log Anomaly Detection -->
                 <article class="project-card">
-                    <div class="project-image">
-                        <!-- Replace the placeholder below with: <img src="your-image.png" alt="Project screenshot"> -->
-                        <div class="project-image-placeholder">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-                            </svg>
-                            <p>Project Screenshot</p>
-                        </div>
-                    </div>
                     <div class="project-content">
-                        <h3 class="project-title">Project Name 2</h3>
+                        <h3 class="project-title">Log Anomaly Detection</h3>
                         <p class="project-description">
-                            Brief description of your second project. Highlight the security concepts 
-                            demonstrated, tools or frameworks used, and the practical application 
-                            of this project in a real-world cybersecurity context.
+                            A Python tool for analysing system and application logs to detect suspicious 
+                            patterns and anomalies. Identifies potential security incidents like brute 
+                            force attempts, unusual access patterns, and indicators of compromise. 
+                            Critical for SOC analysts and incident response teams monitoring for threats.
                         </p>
                         <div class="project-tags">
-                            <span class="tag">Linux</span>
-                            <span class="tag">Bash</span>
-                            <span class="tag">Automation</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Log Analysis</span>
+                            <span class="tag">Threat Detection</span>
+                            <span class="tag">SIEM</span>
                         </div>
-                        <a href="https://github.com/yourusername/project2" class="project-link" target="_blank">
+                        <a href="https://github.com/Samuel-Holder/log-anomaly" class="project-link" target="_blank">
                             View on GitHub
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
@@ -312,42 +299,16 @@
                         </a>
                     </div>
                 </article>
-
-                <!-- 
-                =============================================
-                TO ADD MORE PROJECTS: Copy the block below
-                =============================================
-                
-                <article class="project-card">
-                    <div class="project-image">
-                        <img src="your-image.png" alt="Project screenshot">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">New Project Name</h3>
-                        <p class="project-description">
-                            Your project description here.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Tag1</span>
-                            <span class="tag">Tag2</span>
-                        </div>
-                        <a href="https://github.com/yourusername/project" class="project-link" target="_blank">
-                            View on GitHub
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                            </svg>
-                        </a>
-                    </div>
-                </article>
-                
-                -->
 
             </div>
         </section>
 
         <!-- Footer -->
         <footer>
-            <p class="footer-content">© 2025 Samuel Holder</p>
+            <p class="footer-content">
+                © 2025 Samuel Holder
+                <a href="https://github.com/Samuel-Holder" class="github-link" target="_blank">GitHub</a>
+            </p>
         </footer>
     </div>
 </body>
